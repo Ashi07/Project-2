@@ -1,0 +1,17 @@
+<div class="panel panel-info">
+<div class="panel-heading">
+Blogs Waiting For Approval</div>
+<div class="panel-body">
+
+<ul style="list-style:none">
+<li ng-repeat="blogs in blogsToBeApproved">
+<a href="#/getBlogsWaitingForApproval/{{blogs.id}}"><b>Blog Title</b>{{blogs.blogTitle}}</a>
+<br>
+<b>Posted On:</b>{{blogs.postedOn | date: 'dd:MM:yyyy'}}<br>
+
+
+<b>Posted By:</b> {{blogs.postedBy.firstname}} &nbsp; {{blogs.postedBy.lastname}}
+
+
+
+</div></div>
