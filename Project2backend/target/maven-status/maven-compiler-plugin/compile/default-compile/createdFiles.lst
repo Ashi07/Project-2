@@ -1,0 +1,11 @@
+com\niit\model\User.class
+com\niit\Dao\UserDao.class
+com\niit\DaoImpl\jobDaoImpl.class
+com\niit\Project2backend\App.class
+com\niit\Configuration\DBConfig.class
+com\niit\Configuration\WebAppConfig.class
+com\niit\Configuration\WebAppIntialiser.class
+com\niit\DaoImpl\UserDaoImpl.class
+com\niit\Dao\jobDao.class
+com\niit\model\Job.class
+com\niit\model\ErrorClazz.class
