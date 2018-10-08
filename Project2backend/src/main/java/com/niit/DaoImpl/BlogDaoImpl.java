@@ -3,6 +3,7 @@ package com.niit.DaoImpl;
 import java.util.List;
 
 
+
 import javax.transaction.Transactional;
 
 import org.hibernate.Query;
@@ -14,7 +15,7 @@ import org.springframework.stereotype.Repository;
 import com.niit.Dao.BlogDao;
 import com.niit.model.BlogPost;
 
-@Repository
+@Repository("blogDao")
 @Transactional
 public class BlogDaoImpl implements BlogDao
 {
@@ -25,6 +26,7 @@ public class BlogDaoImpl implements BlogDao
 	{
 		Session session=sessionFactory.getCurrentSession();
 		session.save(blogPost);
+		
 		
 	}
 
@@ -50,15 +52,23 @@ public class BlogDaoImpl implements BlogDao
 	public void blogUpdate(BlogPost blogPost) {
 		Session session =sessionFactory.getCurrentSession();
 		session.update(blogPost);
+		System.out.println("DaoImpl"+blogPost.getid());
 				
 		
 	}
 
 	public void deleteBlog(BlogPost blogPost) {
+		try {
 		Session session=sessionFactory.getCurrentSession();
 		session.delete(blogPost);
-		
+		}
+		catch(Exception ex) {
+			ex.printStackTrace();
+		}
 	}
 
+	
 
 }
+
+

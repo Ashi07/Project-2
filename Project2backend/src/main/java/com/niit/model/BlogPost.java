@@ -27,7 +27,7 @@ public class BlogPost
 	@ManyToOne
 	private User postedBy;
 	private boolean approvalStatus;
-	private int likes;
+	
 	public String getBlogContent() {
 		return blogContent;
 	}
@@ -62,14 +62,12 @@ public class BlogPost
 		return id;
 	}
 	public void setid(int id) {
-		id = id;
+		this.id = id;
 	}
-	public int getLikes() {
-		return likes;
-	}
-	public void setLikes(int likes) {
-		this.likes = likes;
-	}
+	
+	
+	
+	
 	
 
 }

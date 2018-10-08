@@ -13,4 +13,5 @@ List<BlogPost> getBlogsWaitingForApproval();
 BlogPost getBlogPost(int id);
 void blogUpdate(BlogPost blogPost);
 void deleteBlog(BlogPost blogPost);
+
 }
