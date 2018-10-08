@@ -1,9 +1,37 @@
 <span style="color:red">{{error.errorMsg}}</span>
-<form>
-
-Enter email:<input type="text" ng-model="user.email" required><br>
-Enter password:<input type="password" ng-model="user.password" required><br>
-<button ng-click="login(user)">Sign In</button>
 
 
-</form>
+<div class="container">
+	
+	<div class="form">
+		
+			
+			<form>
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-4 col-sm-offset-4 col-lg-4 col-lg-offset-4">
+						<div class="box">
+							
+								<center><h2 style="color:white">Login</h2></center>
+									<div class="input-group">
+								      <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+								      <input id="email" type="text" class="form-control" name="email" placeholder="Email" ng-model="user.email" required/>
+								    </div>
+								    <br>
+								    <div class="input-group">
+								      <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+								      <input id="Password" type="password" class="form-control" name="password" placeholder="Password" ng-model="user.password" required/>
+								    </div>
+								<button  ng-click="login(user)" class="btn btn-success">Sign-In</button>
+								<br>
+								<br>
+								<p  style="color:white">Not a member? <a href="#/registeration" style="color:black;">SignUp Here</a></p>
+						
+					
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+			</div>
+			</div>

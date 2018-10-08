@@ -1,0 +1,14 @@
+<div class="container">
+<div class="list-group">
+<ul style="list-style:none;" class="list-group-item">
+<li ng-repeat="user in suggestedusers"  >
+<img src="http://localhost:8084/Project2middleware/getimage?email={{user.email}}" alt="No Profile pic" width="50px" height="50px"> &nbsp;<h5 class="list-group-item-heading"><b>{{user.firstname}} &nbsp; {{user.lastname}}<br></b></h5>
+<h6 class="list-group-item-text">{{user.email}}<br></h6>
+<h6 class="list-group-item-text">{{user.role}}<br></h6>
+<button class="btn btn-info" ng-click="sendFriendRequest(user)">Send Friend Request</button>
+<br><br>
+<hr>
+</li>
+</ul>
+</div>
+</div>

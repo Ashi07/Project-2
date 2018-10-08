@@ -1,10 +1,234 @@
-<!DOCTYPE html>
+
+	
+	<!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<style>
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+background-image: url("resources/images/background.jpg");
+-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+    font-family: Arial;
+    padding: 10px;
+    
+}
+
+/* Header/Blog Title */
+.header {
+    padding: 30px;
+    text-align: center;
+    background: white;
+}
+
+.header h1 {
+    font-size: 50px;
+}
+
+/* Style the top navigation bar */
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+}
+
+/* Style the topnav links */
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+    float: left;
+    width: 100%;
+}
+
+div.card2{
+position:relative;
+left:1000px;
+bottom:800px;
+
+}
+
+div.card3{
+
+position:relative;
+left:400px;
+bottom:390px;
+
+
+}
+
+.carousel 
+{
+width =100%;
+height =5%;
+position =sticky-top;
+background-color: rgba(0, 0, 0, 0.00);
+}
+
+/* Right column */
+.rightcolumn {
+    float: left;
+    width: 25%;
+    background-color: #f1f1f1;
+    padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+    background-color: #aaa;
+    width: 100%;
+    padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Footer */
+.footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+    margin-top: 20px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn {   
+        width: 100%;
+        padding: 0;
+    }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+    .topnav a {
+        float: none;
+        width: 100%;
+    }
+}
+</style>
 </head>
 <body>
-<h4>Home Page</h4>
+
+
+
+
+
+<div class="row">
+  <div class="leftcolumn">
+   <div class="container">
+
+		<div id="myCarousel" class="carousel slide jumbotron"
+			data-ride="carousel">
+			
+			<ol class="carousel-indicators">
+				<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+				<li data-target="#myCarousel" data-slide-to="1"></li>
+				<li data-target="#myCarousel" data-slide-to="2"></li>
+			</ol>
+
+			
+			<div class="carousel-inner">
+				<div class="item active">
+					<img src="resources/images/office-620817_1920.jpg" alt="sale"
+						style="width: 1200px; height: 350px">
+					<div class="top-left">
+						
+					</div>
+				</div>
+
+				<div class="item">
+					<img src="resources/images/blogging-428955_1920.jpg" alt="bags"
+						style="width: 1200px; height: 350px">
+				</div>
+
+				<div class="item">
+					<img src="resources/images/blog-327073_1920.jpg" alt="dress"
+						style="width: 1200px; height: 350px">
+				</div>
+				
+				
+				
+			</div>
+
+			
+			<a class="left carousel-control" href="#myCarousel" data-slide="prev">
+				<span class="glyphicon glyphicon-chevron-left"></span> <span
+				class="sr-only">Previous</span>
+			</a> <a class="right carousel-control" href="#myCarousel"
+				data-slide="next"> <span
+				class="glyphicon glyphicon-chevron-right"></span> <span
+				class="sr-only">Next</span>
+			</a>
+		</div>
+	
+   
+  </div>
+  <div class="rightcolumn">
+    <div class="card1">
+      <h2>About Us</h2>
+      <img class="card-img-top" src="resources/images/pp.jpg" style="height:100px;"></div>
+      <p >As more and more people are recognizing the power of blogging, blogs are growing in importance every day.<br> This is a social website where you can post your blogs,see blogs of others,search for jobs and<br> chat with other bloggers
+      Many companies post jobs here,<br>As with any job posting, do your research and make sure an opportunity is legitimate before jumping in blindly. <br>
+      If a job seems too good to be true, it probably is.</p>
+    </div>
+    
+     <div class="card3" style="width:400px">
+    <img class="card-img-top" src="resources/images/cc.jpg" alt="Card image" style="width:100%">
+    <div class="card-body">
+      <h4 class="card-title" style="color:mintcream;"><b>“One of the advantages of being disorderly is that one is constantly making exciting discoveries.”</b></h4>
+      <p class="card-text" style="color:white;">There’s much to be said for being organised and tidy but sometimes you've just got to let go.<br>
+     Creativity isn't a fan of being put in a box and neatly stacked on a shelf. <br>It likes to jump around, spill stuff, chew things up and spit things out. <br>It likes a bit of chaos.If you’re stuck for ideas,
+      <br>maybe try firing off a paint-ball gun in your study or pushing your bookcase over. </p>
+    
+    </div>
+  </div>
+    
+    <div class="card2">
+      <h3 style="color:antiquewhite;">Popular Post</h3>
+      <div class="fakeimg"><p><b>Spring MVC</b></p></div>
+      <div class="fakeimg"><p><b>Restful Services</b></p></div>
+      <div class="fakeimg"><p><b>Hibernate</b></p></div>
+    </div>
+   
+  </div>
+</div>
+
+
+
 </body>
 </html>
+	
+	

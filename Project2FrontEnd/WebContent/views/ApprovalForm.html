@@ -4,8 +4,9 @@ Blog Details</div>
 <div class="panel-body">
 
 
+
 <b>Blog Title:</b>
-{{blogPost.id}}
+
 {{blogPost.blogTitle}}<br>
 <b>Posted On : </b> {{blogPost.postedOn | date:'dd-MM-yyyy'}}<br>
 <b>Posted By : </b> {{blogPost.postedBy.firstname}} &nbsp; {{blogPost.postedBy.lastname}}
@@ -17,6 +18,14 @@ Blog Details</div>
  
  </div>
  <button class="btn btn-info" ng-click="approveBlogPost(blogPost)">Approve</button>
-  <button class="btn btn-danger" ng-click="rejectBlogPost(blogPost)">Rejected</button>
+  <button class="btn btn-danger" ng-click="showTextArea()">Reject</button>
+ <div ng-show="isRejected">
+ 
+  <textarea ng-model="rejectionReason"></textarea> 
+  
+  <button ng-click="rejectBlogPost(blogPost)">Submit</button>
+  
+  </div>
+ 
   </div>
  

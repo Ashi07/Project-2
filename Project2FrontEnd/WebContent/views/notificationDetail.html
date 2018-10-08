@@ -1,0 +1,14 @@
+<div class="container">
+	<div class="panel panel-info">
+		<div class="panel-heading">
+			<b>Blog Status</b>
+		</div>
+<div class="panel-body">
+		
+<h3 style="color:midnightblue;"><b>Blog Post Titled:</b> {{notification.blogTitle}} </h3>
+<h5 style="color:black;"><b>Status: </b>{{notification.approvalStatus}}</h5>
+<p ng-show="notification.approvalStatus=='Rejected'"><h5 style="color:black;"><b>Reason:</b>{{notification.rejectionReason}}</h5></p>
+
+</div>
+</div>
+</div>

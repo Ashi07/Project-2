@@ -1,0 +1,20 @@
+
+<div class="panel panel-info">
+<div class="panel panel-heading">
+Friend Request
+</div>
+
+<div class="panel panel-body">
+<ul style="list-style:none;">
+<li ng-repeat="request in pendingrequest">
+
+<img src="http://localhost:8084/Project2middleware/getimage?email={{request.fromId.email}}" alt="No Profile pic" width="50px" height="50px">&nbsp;<b>{{request.fromId.firstname}} &nbsp; {{request.fromId.lastname}}</b><br>
+{{request.fromId.email}}<br>
+{{request.fromId.role}}
+<br>
+<button class="btn btn-info" ng-click="acceptrequest(request)">Accept</button>
+<button class="btn btn-danger" ng-click="rejectrequest(request)">Reject</button>
+<br><br>
+<hr>
+</div>
+</div>

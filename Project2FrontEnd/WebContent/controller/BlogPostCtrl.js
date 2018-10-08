@@ -1,4 +1,4 @@
-app.controller('BlogPostCtrl',function($scope,$location,BlogPostService){
+app.controller('BlogPostCtrl',function($scope,$location,BlogPostService,$rootScope){
 $scope.addBlogPost=function(blogPost){
 	BlogPostService.addBlogPost(blogPost).then(function(response){
 		alert("Blog has been inserted successfully,Please wait for the approval")
@@ -31,6 +31,7 @@ function getBlogsToBeApproved(){
 }
 
 getApprovedBlogs()
+if($rootScope.user.role=='admin')
 getBlogsToBeApproved()
 	
 })

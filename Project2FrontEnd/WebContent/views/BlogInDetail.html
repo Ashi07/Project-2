@@ -13,9 +13,27 @@ Blog Details</div>
  <b>Blog Content</b>
  <p ng-bind-html="content"></p><br>
  
- </div>
 
-Likes : {{blogPost.likes}}<br>
 
-<a href="#/getblogs">Get all blogs</a>
+
+
+
+<textarea rows="5" cols="20" ng-model="commentText" required>
+
+
+</textarea><br>
+<button class="btn btn-info" ng-click="addBlogComment(blogPost,commentText)">Post Comment
+</button>
+<div ng-hide="blogComment==undefined">
+<b>{{blogComment.commentedBy.email}}</b>&nbsp;: {{blogComment.commentText}} &nbsp; ,{{blogComment.commentedOn | date:'yyyy:mm:dd'}}<br>
+</div>
+<a ng-click="getallblogcomment(blogPost.id)">View All Comments</a><br>
+<ul style="list:none;">
+<li ng-repeat="comment in blogComments">
+<b>{{comment.commentText}}</b><br>
+<b>{{comment.commentedBy}} &nbsp; Date:{{comment.commentedOn | date:'yyyy:mm:dd'}} </b>
+</li>
+</ul>
+<a href="#/getBlogs">Get all blogs</a>
+</div>
 </div>

@@ -3,7 +3,7 @@ app.config(function($routeProvider){
 	
 	
 	$routeProvider
-	.when('/',{templateUrl:'views/home.html'})
+	.when('/home',{controller:'HomeCtrl',templateUrl:'views/home.html'})
 	.when('/registeration',{controller:'UserCtrl',templateUrl:'views/registerationform.html'})
 	.when('/getallusers',{controller:'UserCtrl',templateUrl:'views/getusers.html'})
 	.when('/updateuser',{controller:'UserCtrl',templateUrl:'views/updateuser.html'})
@@ -15,6 +15,13 @@ app.config(function($routeProvider){
 	.when('/getBlog/:Id',{controller:'BlogInDetailCtrl',templateUrl:'views/BlogInDetail.html'})
 	.when('/blogswaitingforapproval',{controller:'BlogPostCtrl',templateUrl:'views/WaitingForApproval.html'})
 	.when('/getBlogsWaitingForApproval/:Id',{controller:'BlogInDetailCtrl',templateUrl:'views/ApprovalForm.html'})
+	.when('/getnotification/:id',{controller:'NotificationCtrl',templateUrl:'views/notificationDetail.html'})
+	.when('/suggestedusers',{controller:'FriendCtrl',templateUrl:'views/suggesteduserlist.html'})
+	.when('/pendingrequest',{controller:'FriendCtrl',templateUrl:'views/pendingrequest.html'})
+	.when('/listoffriends',{controller:'FriendCtrl',templateUrl:'views/friendslist.html'})
+	.when('/uploadprofilepic',{templateUrl:'views/uploadprofilepicture.html'})
+	.when('/chat',{	templateUrl:'views/chat.html',	controller:'ChatController'})
+	
 	
 
 	.otherwise({templateUrl:'views/home.html'})
